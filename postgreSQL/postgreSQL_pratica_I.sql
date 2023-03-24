@@ -1,6 +1,9 @@
 -- Para mostrar o HORÁRIO em que estamos EXECUTANDO a QUERY
 SELECT NOW();
 
+
+-- OPERAÇÕES CRUD:
+
 -- Para CRIAR uma DATABASE
 CREATE DATABASE alura;
 
@@ -64,7 +67,7 @@ VALUES (
  SELECT * FROM aluno WHERE ID = 1; -- Não retornará
  
  
- -- Para ATUALIZAR a TABELA
+-- Para ATUALIZAR a TABELA
  UPDATE aluno
  SET nome = 'Mia',
 	cpf = '10987654321',
@@ -78,7 +81,7 @@ VALUES (
 	matriculado_em = '2020-01-02 15:00:00'
   WHERE id = 1;
   
-  -- Para EXCLUIR a TABELA
+-- Para EXCLUIR a TABELA
   
  -- Primeiro procuramos a partir do todo (*)
 SELECT * FROM aluno WHERE nome = 'Mia';
@@ -100,7 +103,7 @@ INSERT INTO aluno(
 	hora_aula,
 	matriculado_em) 
 VALUES (
-	'Âmbar',
+	'Diogo',
 	'12345678901',
 	'natação',
 	35,
@@ -111,6 +114,51 @@ VALUES (
 	'17:30:00',
 	'2020-02-08 12:32:45'
 );
+
+-- Para selecionar campos específicos
+SELECT nome,
+       idade,
+       matriculado_em
+  FROM aluno;
+
+-- Para utilizar um ALIAS (as), trocar o nome de exibição dos campos na tabela
+
+SELECT nome AS "Nome do Aluno",
+       idade,
+       matriculado_em AS quando_se_matriculou
+    FROM aluno;
+
+
+
+-- Para CONSULTAR/FILTRAR REGISTROS de campos do tipo texto (VARCHAR, CHAR, TEXT)
+
+SELECT * FROM aluno; 
+  
+SELECT * FROM alunO WHERE nome= 'Diogo';
+ 
+SELECT * FROM aluno WHERE nome <> 'Diogo';
+ 
+SELECT * FROM aluno WHERE nome != 'Diogo';
+ 
+SELECT * FROM aluno WHERE nome LIKE '_iogo';
+ 
+SELECT * FROM aluno WHERE nome LIKE 'Di_go';
+ 
+SELECT * FROM aluno WHERE nome NOT LIKE 'Di_go';
+ 
+SELECT * FROM aluno WHERE nome LIKE 'D%';
+ 
+SELECT * FROM aluno WHERE nome LIKE '%s';
+ 
+SELECT * FROM aluno WHERE nome LIKE '% %';
+ 
+SELECT * FROM aluno WHERE nome LIKE '%i%a%';
+
+
+
+
+
+
 
 
 
