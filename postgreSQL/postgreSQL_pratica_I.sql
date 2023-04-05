@@ -154,6 +154,36 @@ SELECT * FROM aluno WHERE nome LIKE '% %';
  
 SELECT * FROM aluno WHERE nome LIKE '%i%a%';
 
+SELECT * FROM alunO WHERE cpf IS NULL;
+ 
+SELECT * FROM aluno WHERE cpf IS NOT NULL;
+
+SELECT * FROM aluno WHERE idade = 35;
+
+SELECT * FROM aluno WHERE idade <= 35;
+   
+SELECT * FROM aluno WHERE idade BETWEEN 20 AND 40;
+ 
+SELECT * FROM aluno WHERE ativo = true;
+SELECT * FROM aluno WHERE ativo = false; 
+SELECT * FROM aluno WHERE ativo IS NULL;
+
+SELECT * FROM aluno WHERE nome LIKE 'D%'
+AND cpf IS NOT NULL;
+   
+SELECT * FROM aluno WHERE nome LIKE 'Diogo'
+OR nome LIKE 'Carmem';
+   
+SELECT * FROM aluno WHERE nome LIKE 'Diogo'
+OR nome LIKE 'Rodrigo'
+OR nome LIKE 'Car%';
+	
+SELECT * FROM aluno WHERE nome LIKE '%Steppat'
+AND nome LIKE 'Car%';
+	
+SELECT * FROM aluno WHERE nome LIKE 'Diogo'
+OR nome LIKE 'Car%';
+
 
 
 
